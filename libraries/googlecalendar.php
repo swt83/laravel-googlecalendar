@@ -20,7 +20,7 @@ class GoogleCalendar
 		$config = Config::get('google-calendar::google');
 		
 		// build object
-		$object = new GCalendar($config['email'], $config['password']);
+		$object = new Google\GCalendar($config['email'], $config['password']);
 		
 		// authenticate
 		$object->authenticate();

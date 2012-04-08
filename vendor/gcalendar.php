@@ -1,4 +1,7 @@
 <?php
+
+namespace Google; // added by swt83
+
 /*
 Copyright 2011 Montania System AB
 
@@ -57,7 +60,7 @@ class GCalendar {
   function __construct($email, $password) {
     $this->email    = $email;
     $this->password = $password;
-    #date_default_timezone_set("Europe/Stockholm");
+    #date_default_timezone_set("Europe/Stockholm"); // commented out by swt83
     
     DEFINE("DEFAULT_MAX_EVENTS", 25);
     
