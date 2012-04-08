@@ -14,7 +14,7 @@ class GoogleCalendar
 	public static function __callStatic($method, $args)
 	{
 		// includes
-		require_once(__DIR__.'/../vendor/gcalendar.class.php');
+		require_once(__DIR__.'/../vendor/gcalendar.php');
 	
 		// load config
 		$config = Config::get('google-calendar::google');
@@ -26,6 +26,11 @@ class GoogleCalendar
 		$object->authenticate();
 		
 		// run method
-		return call_user_func_array(array($object, $method), $args);
+		return call_user_func_array(array($object, self::camelize($method)), $args);
+	}
+	
+	private static function camelize($word)
+	{
+		return preg_replace('/(^|_)(.)/e', "strtoupper('\\2')", strval($word));
 	}
 }
