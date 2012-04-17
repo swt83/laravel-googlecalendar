@@ -5,7 +5,7 @@
  *
  * @package    GoogleCalendar
  * @author     Scott Travis <scott.w.travis@gmail.com>
- * @link       http://github.com/swt83
+ * @link       http://github.com/swt83/laravel-googlecalendar
  * @license    MIT License
  */
 
@@ -17,7 +17,7 @@ class GoogleCalendar
 		require_once(__DIR__.'/../vendor/gcalendar.php');
 	
 		// load config
-		$config = Config::get('google-calendar::google');
+		$config = Config::get('googlecalendar'); // from application, not bundle
 		
 		// build object
 		$object = new Google\GCalendar($config['email'], $config['password']);

@@ -1,14 +1,14 @@
 # Google Calendar for LaravelPHP #
 
-This package is a Laravel wrapper for [Montania's Google Calendar Class](https://github.com/montania/Google-Calendar-API-PHP-Class).
+This package is a simple wrapper for [Montania's Google Calendar Class](https://github.com/montania/Google-Calendar-API-PHP-Class).
 
 ## Install ##
 
-Copy the ``config/google-sample.php`` file, rename to ``config/google.php``, and input your login credentials.
+Copy the config file to ``application/config/googlecalendar.php`` and input the proper information.
 
 ## Usage ##
 
-Just do straight static method calls, and don't worry about authentication, as the wrapper will handle that for you.
+Just do straight static method calls.  Don't worry about authentication, the wrapper will handle that for you.
 
 ```php
 $calendars = GoogleCalendar::get_all_calendars();
